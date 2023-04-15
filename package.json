@@ -1,0 +1,25 @@
+{
+  "name": "learn-to-build-react-package",
+  "private": true,
+  "description": "Learn to to build react package",
+  "keywords": [],
+  "author": "PhatNguyen <phatnt.uit@gmail.com> (https://phatnguyenuit.github.io)",
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --scope my-react-package",
+    "clean": "lerna run clean --scope my-react-package",
+    "watch": "lerna run watch --scope my-react-package",
+    "package": "lerna exec --scope my-react-package -- npm pack"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "lerna": "^4.0.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
