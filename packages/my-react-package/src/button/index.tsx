@@ -1,10 +1,14 @@
 import {Button, ButtonProps} from "antd";
 import React from "react";
+import scssClasses from './styles.module.scss';
+
 
 const CustomButton: React.FC<ButtonProps> = props => {
     return (
         <>
-            <Button {...props}/>
+            <div className={scssClasses.datpd}>
+                <Button {...props}/>
+            </div>
         </>
     );
 };
