@@ -3,21 +3,24 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import postCSS from 'rollup-plugin-postcss';
 
-import pkg from './package.json';
+const packageJson = require('./package.json');
+
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      file: './lib/cjs/index.js',
+      file: packageJson.main,
       format: 'cjs',
+      sourcemap: true
     },
     {
-      file: './lib/esm/index.js',
-      format: 'es',
-    },
+      file: packageJson.module,
+      format: 'esm',
+      sourcemap: true
+    }
   ],
-  external: [...Object.keys(pkg.peerDependencies || {})],
+  external: [...Object.keys(packageJson.peerDependencies || {})],
   plugins: [
     nodeResolve(),
     commonjs(),
