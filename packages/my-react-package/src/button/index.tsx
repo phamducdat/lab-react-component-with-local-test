@@ -3,7 +3,12 @@ import React from "react";
 import scssClasses from './styles.module.scss';
 
 
-const CustomButton: React.FC<ButtonProps> = props => {
+export interface CustomButtonProps extends ButtonProps {
+    firstName?: string;
+    lastName?: string;
+}
+
+const CustomButton: React.FC<CustomButtonProps> = props => {
     return (
         <>
             <div className={scssClasses.datpd}>

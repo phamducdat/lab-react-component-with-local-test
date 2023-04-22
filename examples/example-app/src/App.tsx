@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import {Button} from "my-react-package";
+import {Button, Hello} from "my-react-package";
 
 function App() {
     return (
         <div className="App">
-            <Button type={"primary"}>
+            <Hello name={"datpd"}/>
+            <Button>
                 datpd
             </Button>
         </div>

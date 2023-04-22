@@ -1,6 +1,6 @@
 {
-  "name": "my-react-package",
-  "version": "1.0.0",
+  "name": "@datpd/my-react-package",
+  "version": "0.0.21",
   "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -19,8 +19,8 @@
   "author": "PhatNguyen <phatnt.uit@gmail.com> (https://phatnguyenuit.github.io)",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^17.0.2 || ^18.0.0",
+    "react-dom": "^17.0.2 || ^18.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.0",
